@@ -4,6 +4,10 @@
     margin-top: 5px;
     margin-bottom: 10px;
 }
+div {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
 .education-title{
 
     margin-top: 30px;
