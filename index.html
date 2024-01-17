@@ -1,74 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-        name="description"
-        content="Software Developer with skills in Frontend, UI/UX, seeking internship and full-time opportunities"
+      name="description"
+      content="Software Developer with skills in Frontend, UI/UX, seeking internship and full-time opportunities"
     />
     <meta
-        name="keywords"
-        content="Sudipta Banerjee, Master of Computer Science, Software Development, Frontend Development, Portfolio, Illinois Institute of Technology"
+      name="keywords"
+      content="Sudipta Banerjee, Master of Computer Science, Software Development, Frontend Development, Portfolio, Illinois Institute of Technology"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Sudipta Banerjee - Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="Images/title.png" />
-    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Images/icons8-developer-96.png"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/octicons@13.0.0/build/font/octicons.css">
+    <link rel="stylesheet" href="./styles.css" />
     <!-- Additional CSS or libraries (if needed) -->
     <!-- Example: Bootstrap -->
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Example: Montserrat font -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
     />
-</head>
-<body>
-
-    <header>
-        <h1>Your GitHub Portfolio</h1>
-        <p>Welcome to my coding journey!</p>
-    </header>
-
-    <section id="projects">
-        <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <div class="project-details">
-                <h2>Project 1</h2>
-                <p>Description of Project 1.</p>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-            </div>
+  </head>
+  <body>
+    <!-- Navbar  Section Start -->
+    <nav
+      class="navbar navbar-expand-md navbar-dark"
+      style="background-color: #333333"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="Images/logo.png"
+            alt="SB Logo"
+            width="40"
+            height="40"
+            class="mr-2"
+          />
+          <span class="logo-text">Sudipta Banerjee</span>
+        </a>
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#about"
+                aria-current="page"
+                style="color: #fff"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education" style="color: #fff"
+                >Education</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience" style="color: #fff"
+                >Work Experience</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects" style="color: #fff"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" style="color: #fff"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
-
-        <div class="project">
-            <img src="project2.jpg" alt="Project 2">
-            <div class="project-details">
-                <h2>Project 2</h2>
-                <p>Description of Project 2.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-            </div>
+      </div>
+    </nav>
+    <!-- Component: About Me -->
+    <section
+      class="container my-5"
+      id="about"
+      style="background-color: #cfe2e4"
+    >
+      <h2 class="section-header">
+        <span
+          class="heading"
+        >
+          About Me
+        </span>
+      </h2>
+      <div class="about row">
+        <div class="main-intro col-lg-7 my-auto">
+          <p style="text-align: justify; margin-top: 30px; font-family: 
+          'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Hello, I'm Sudipta Banerjee, a passionate Computer Science student
+            currently pursuing a Master of Computer Science (M.A.S) at the
+            Illinois Institute of Technology. With over 2 years of hands-on
+            experience, I have served as an Application Developer at IBM,
+            contributing to various projects and gaining valuable insights into
+            the world of software development. Additionally, I've dedicated 6
+            months to a Research Internship at DRL, Tezpur, where I immersed
+            myself in cutting-edge research, further expanding my knowledge in
+            the field.
+          </p>
+          <p style="text-align: justify; margin-top: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            On the frontend, I've crafted engaging projects like the Github
+            Analytics Dashboard and Book-Spot, showcasing my proficiency in
+            JavaScript, HTML, and CSS. Beyond coding, I take pride in my
+            contributions to academia, having authored two research papers and
+            secured a patent, reflecting my commitment to advancing knowledge
+            and fostering innovation.
+          </p>
+          <p style="text-align: justify; margin-top: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            I am actively seeking exciting opportunities for a UI/UX and
+            Software Development Internship during Summer 2024. Eager to
+            contribute my skills and enthusiasm, I am dedicated to advancing my
+            expertise and making meaningful contributions to innovative
+            projects.
+          </p>
+          <p>
+            <a
+              class="resume-button"
+              href="./Sudipta Banerjee (Resume).pdf"
+              target="_blank"
+            >
+              <button class="resume">Link to my Resume 📄</button>
+            </a>
+          </p>  
+          <div class="social-icons">
+            <a href="https://github.com/Sudiptobanerjee123" aria-label="GitHub" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sudiptabanerjee14/" aria-label="LinkedIn" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/warrior807/" aria-label="Instagram" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-        <!-- Add more projects as needed -->
+        
+        </div>
+        <div class="col col-lg">
+          <img
+            class="developer-image"
+            src="./Images/Sudipta.png"
+            alt="snapshot of Sudipta"
+            style="margin: 30px"
+          />
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>Connect with me:</p>
-        <ul>
-            <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-            <!-- Add more social media links as needed -->
-        </ul>
-    </footer>
+    <!--Education-->
+    <section class="container my-5" id="education" style="background-color: #cfe2e4">
+        <h2 class="section-header" style="text-align: center">
+            <span
+              class="heading"
+            >   
+              Education
+            </span>
+          </h2>
+        <div class="education row">
+            <!-- Education 1 -->
+            <div class="col-lg-6" >
+                <h2 style="margin-top:30px;font-family:Georgia, 'Times New Roman', Times, serif">Master of Computer Science (M.A.S)</h2>
+                <p class="major">Major: Computer Science (CS)</p>
+                <p class="education-details">Illinois Institute of Technology</p>
+                <p class="education-details">Graduation: May 2025</p>
+                <p class="education-details"style="margin-bottom: 20px;">CGPA: 3.34/4.00</p>
+                <!-- Add any additional details or relevant information here -->
+            </div>
+    
+            <!-- Education 2 -->
+            <div class="col-lg-6">
+                <h2 style="margin-top:30px;font-family:Georgia, 'Times New Roman', Times, serif">Bachelor of Technology (B.Tech) </h2>
+                <p class="major"> Major: Electronics & Communication Engineering (ECE)</p>
+                <p class="education-details">SRM Institute of Science and Technology</p>
+                <p class="education-details">Graduation: June 2020</p>
+                <p class="education-details" style="margin-bottom: 20px;">CGPA: 3.62/4.00</p>
+                <!-- Add any additional details or relevant information here -->
+            </div>
+        </div>
+    </section>    
+    <!-- Experience section component -->
+    <section class="container my-5" id="experience">
+      <h2 class="section-header">
+        <span class="heading">Work Experience</span>
+      </h2>
+      <div id="accordion">
+        <div class="card">
+          <h3 class="exp-card-header card-header py-4">
+            <button
+              class="btn btn-link btn-block text-left"
+              data-toggle="collapse"
+              href="#collapseOne"
+            >
+              Associate System Engineer, IBM
+            </button>
+          </h3>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li class="exp-desc">
+                  Collaborated with a team of 4 to maintain application for SAP
+                  Support on WebMethods integration platform, handling the load
+                  of 38000 transactions every day.
+                </li>
+                <li class="exp-desc">
+                  Optimized daily monitoring with Linux script and java code
+                  optimization, bug resolving which reduced transaction failure
+                  rate by 60%.
+                </li>
+                <li class="exp-desc">
+                  Developed and presented platform specific troubleshooting
+                  documentation and codebook used for training 10 new hires.
+                </li>
+                <li class="exp-desc">
+                  Revamped software patching methodology and decreased system
+                  downtime by 20% with customized scripts which improved quality
+                  check by 25%.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card my-3">
+          <h3 class="exp-card-header card-header py-4">
+            <button
+              class="btn btn-link btn-block text-left"
+              data-toggle="collapse"
+              href="#collapseTwo"
+            >
+              Fullstack Developer, Kerkar Media
+            </button>
+          </h3>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li class="exp-desc">
+                  Designed and developed mobile responsive web application for
+                  Digital Marketing firm which included blogging, testimonials,
+                  forms and resulted in 30% more customer satisfaction after
+                  deploying the application.
+                </li>
+                <li class="exp-desc">
+                  Built an E-commerce specific application with online selling,
+                  appointment booking, learning activities and live customer
+                  support which boosted the company profit by 15%.
+                </li>
+                <li class="exp-desc">
+                  Created ad specific static templates and forms which increased
+                  user involvement by 5% resulting engagement conversion rate to
+                  8%.
+                </li>
+                <li class="exp-desc">
+                  Tested accessibility of web applications using multiple
+                  approaches that boosted application experience by 10% and
+                  helped to improve performance to 100.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Projects section -->
+    <section class="container my-5" id="projects">
+      <h2 class="section-header">
+        <span class="heading">Academic Projects</span>
+      </h2>
+      <div class="project-container"></div>
+    </section>
+
+    <!-- contact section -->
+    <section class="container my-5" id="contact">
+      <h2 class="section-header">
+        <span class="heading">Let's Connect!</span>
+      </h2>
+      <form class="bg-light mx-auto rounded p-5 form" id="email-form">
+        <div class="row form-group mb-3">
+          <label class="col-sm-3 col-form-label" for="name"> Name: </label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" id="name" name="name" />
+          </div>
+        </div>
+        <div class="row form-group mb-3">
+          <label class="col-sm-3 col-form-label" for="email"> Email: </label>
+          <div class="col-sm-9">
+            <input
+              class="col-sm form-control"
+              type="email"
+              id="email"
+              name="email"
+            />
+          </div>
+        </div>
+        <div class="row form-group mb-3">
+          <label class="col-sm-3 col-form-label" for="message">
+            Message:
+          </label>
+          <div class="col-sm-9">
+            <textarea
+              class="col-sm form-control"
+              type="message"
+              id="message"
+              name="message"
+              placeholder="Please submit any feedback or message for me!"
+            ></textarea>
+          </div>
+        </div>
+        <div
+          class="form-group buttons form-buttons d-flex justify-content-center"
+        >
+          <button
+            class="btn submit-button mx-2"
+            type="submit"
+            id="submit-button"
+          >
+            Send Message
+          </button>
+          <button class="btn reset-button" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer component -->
+    <footer class="container-fluid footer text-center mt-5"></footer>
+  </body>
 </html>
