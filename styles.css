@@ -4,7 +4,11 @@
     margin-top: 5px;
     margin-bottom: 10px;
 }
+.education-title{
 
+    margin-top: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .social-icon {
     margin: 0 10px;
     font-size: 30px;
@@ -43,6 +47,21 @@
   .education-details{
     margin-bottom: 5px;
   }
+  .card-body{
+
+    text-align: justify;
+  }
+  .btn-link{
+    text-decoration: none;
+    color: var(--dominant1) !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    font-family:sans-serif;
+}
+
+.btn-link:hover {
+    color: var(--dominant1) !important;
+}
   .nav-item:hover{
     background-color: rgb(177, 102, 102);
     border-radius: 5px;
@@ -58,17 +77,105 @@
     font-style: oblique;
     color:rgb(153, 9, 9);
 }
-@media (min-width: 576px) and (max-width: 768px){
-    .project-card {
-      width: calc(50% - 10px);
-    }
+/* Default styles for larger screens */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .main-intro {
+    flex: 0 0 60%; /* Adjust the width as needed */
+    margin-right: 20px;
   }
   
-@media (max-width: 575px) {
-    .main-intro h1 {
-        font-size: 22px;
+  .developer-image {
+    width: 90%; /* Make the image fill the container */
+    margin: 20px 0;
+    flex: 0 0 20%;
+  }
+  .section-header{
+    font-size:x-large;
+}
+.navbar-toggler {
+    display: none; /* Hide the default toggler for larger screens */
+}
+.card-exp{
+    padding: 10px;
+}
+.exp-desc{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+  /* Media query for tablets (landscape) */
+  @media (max-width: 1024px) {
+    .about {
+        flex-direction: row; /* Stack items in a column on tablets */
     }
-    .project-card {
-      width: calc(100%);
+
+    .main-intro {
+        width: auto;
+        flex: 0 0 100%; /* Full width for the content on tablets */
+        margin-right: 0; /* No margin for the content */
+    }
+    .education-title{
+        font-size: 25px;
+        font-weight:bold
+    }
+    .education-details{
+        font-size: 15px;
     }
 }
+  /* Media query for phones and smaller tablets */
+  @media (max-width: 767px) {
+    .about {
+      flex-direction: row; /* Stack items in a column on smaller screens */
+    }
+  
+    .main-intro {
+      margin-right: 0;
+      font-size:14px;
+    }
+    .developer-image {
+       width: auto;
+       margin: 0 auto; /* Center the image and provide equal space on both sides */
+       display: block; /* Ensure the image is displayed as a block element */
+       margin-bottom: 30px;;
+    }
+    .section-header{
+        font-size:larger;
+    }
+    .education-title{
+        font-size: 19px;
+        font-weight:bold
+    }
+    .education-details{
+        font-size: 15px;
+    }
+    .navbar-toggler {
+        display: block; /* Show the toggler for mobile screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically for mobile screens */
+        text-align: center; /* Center text in mobile nav */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 5px 0; /* Add space between nav items for better spacing on mobile */
+    }
+    .btn-link{
+        text-decoration: none;
+        color: var(--dominant1) !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+        font-family: sans-serif;
+    }
+    .card-exp{
+        padding: 2px;
+    }
+    .exp-desc{
+        font-size: 13px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+  
