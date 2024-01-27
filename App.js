@@ -76,10 +76,39 @@ const displayProjects = (ProjectData) => {
 displayProjects(ProjectData);
 
 // Footer Component
-
 const footer = document.querySelector(".footer");
-let footerText = document.createElement("p");
-footerText.textContent = `Developed in ${new Date().getFullYear()} by Shreya Choure`;
-footerText.style.padding = "20px";
-footerText.style.marginBottom = "0";
-footer.append(footerText);
+footer.style.margin = "0";
+footer.style.padding = "0";
+footer.style.boxSizing = "border-box";
+
+// Create a container for the footer content
+let footerContainer = document.createElement("div");
+footerContainer.style.backgroundColor = "#333333"; // Choose a light background color
+footerContainer.style.color = "#fff"; // Choose a dark text color
+footerContainer.style.padding = "18px";
+footerContainer.style.textAlign = "center";
+footerContainer.style.borderRadius = "0px";
+
+// Create the footer text
+let footerText = document.createElement("footer-fontsize");
+footerText.textContent = `© ${new Date().getFullYear()} Developed by Sudipta Banerjee`;
+
+footerText.classList.add("footer-fontsize");
+
+// Append the footer text to the container
+footerContainer.appendChild(footerText);
+
+// Append the container to the footer element
+footer.appendChild(footerContainer);
+
+// button-to top
+const btnScrollTop = document.querySelector("#btnScrollTop");
+btnScrollTop.addEventListener("click",function(){
+
+    window.scrollTo({
+
+        top: 0,
+        left: 0,
+        behavior:"smooth"
+    });
+})

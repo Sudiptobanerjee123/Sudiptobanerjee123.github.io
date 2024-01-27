@@ -80,6 +80,11 @@ div {
   text-align: center;
   margin: 10px 0;
 }
+.footer-fontsize{
+    margin: 0px;
+    font-size: 16px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .resume {
   padding: 8px 10px;
   background-color: rgb(22, 22, 78); /* Button background color */
@@ -109,7 +114,39 @@ div {
   font-size: 18px !important;
   font-family: sans-serif;
 }
+/* contact form */
+.form {
+    width: 800px;
+}
+.form-buttons button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.submit-button {
+    background-color:#AED4D5;
+    color: #344B59; 
+}
+.submit-button:hover{
+    background-color:#344B59;
+    color: #CDE5D8;
+}
+.contact-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.reset-button {
+    background-color:#E4E5E9;
+    color: #344B59; 
+}
 
+.reset-button:hover {
+    background-color: #344B59; 
+    color: #CDE5D8;
+}
 .btn-link:hover {
   color: var(--dominant1) !important;
 }
@@ -157,6 +194,26 @@ div {
 .exp-desc {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+#btnScrollTop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(124, 19, 19);
+    box-shadow: 0 0 10px black;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#btnScrollTop:active{
+    background:#d54a20;
+}
 /* Media query for tablets (landscape) */
 @media (max-width: 1024px) {
   .about {
@@ -183,7 +240,7 @@ div {
   }
   .project-card .card-body .project-desc {
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 10px; /* Add margin to separate title and description */
     text-align: justify;
     word-spacing: 1px;
@@ -231,8 +288,11 @@ div {
     padding: 2px;
   }
   .exp-desc {
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .list-padding{
+    padding-left: 8px;
   }
   /* projects component */
   .project-container {
@@ -240,6 +300,7 @@ div {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
+    margin-top: 20px;
   }
 
   .project-card {
@@ -281,5 +342,12 @@ div {
 
   .github-button:hover {
     background-color: #b54a33;
+  }
+
+  .footer-fontsize{
+    font-size: 14px;
+  }
+  .contact-container{
+    font-size: 14px;
   }
 }
