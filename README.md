@@ -15,7 +15,7 @@ This is a portfolio website showcasing projects, education, and experience. The 
 
 - `index.html`: The main HTML file containing the structure of the portfolio website.
 - `style.css`: The stylesheet file with styling rules for the website.
-- `script.js`: The JavaScript file handling dynamic content, animations, and scroll events.
+- `App.js`: The JavaScript file handling dynamic content, animations, and scroll events.
 
 ## HTML
 
@@ -27,7 +27,7 @@ The CSS file (`style.css`) provides styles for the entire website. It includes s
 
 ## JavaScript
 
-The JavaScript file (`script.js`) handles the dynamic display of project cards, the scroll-to-top button, and section animations. It also contains event listeners for smooth scrolling and button functionality.
+The JavaScript file (`App.js`) handles the dynamic display of project cards, the scroll-to-top button, and section animations. It also contains event listeners for smooth scrolling and button functionality.
 
 ## Functionalities
 
