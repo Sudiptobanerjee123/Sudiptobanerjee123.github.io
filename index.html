@@ -1,6 +1,7 @@
-'<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for document information -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +13,8 @@
       name="keywords"
       content="Sudipta Banerjee, Master of Computer Science, Software Development, Frontend Development, Portfolio, Illinois Institute of Technology"
     />
+
+    <!-- External CSS libraries -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -20,43 +23,45 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-    <title>Sudipta Banerjee - Portfolio</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="Images/icons8-developer-96.png"
-    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- Additional CSS or libraries (if needed) -->
-    <!-- Example: Bootstrap -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Example: Montserrat font -->
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Page title and favicon -->
+    <title>Sudipta Banerjee - Portfolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Images/icons8-developer-96.png"
+    />
   </head>
+
   <body>
-    <!-- Navbar  Section Start -->
+    <!-- Navigation Bar -->
     <nav
       class="navbar navbar-expand-md navbar-dark"
       style="background-color: #333333"
     >
       <div class="container">
+        <!-- Brand logo and text -->
         <a class="navbar-brand" href="#">
           <img
             src="Images/logo.png"
@@ -67,6 +72,7 @@
           />
           <span class="logo-text">Sudipta Banerjee</span>
         </a>
+        <!-- Navbar toggler button for small screens -->
         <button
           class="navbar-toggler"
           type="button"
@@ -79,6 +85,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -114,17 +121,17 @@
         </div>
       </div>
     </nav>
-    <!-- Component: About Me -->
+
+    <!-- About Me Section -->
     <section
-      class="container my-5"
+      class="container my-5 fade-in"
       id="about"
       style="background-color: #cfe2e4"
     >
-      <h2 class="section-header">
-        <span class="heading"> About Me </span>
-      </h2>
+      <h2 class="section-header"><span class="heading"> About Me </span></h2>
       <div class="about row">
         <div class="main-intro col-lg-7 my-auto">
+          <!-- Paragraphs introducing yourself -->
           <p
             style="
               text-align: justify;
@@ -172,12 +179,13 @@
           <p>
             <a
               class="resume-button"
-              href="./Sudipta Banerjee (Resume).pdf"
+              href="/Sudipta Banerjee (Resume).pdf"
               target="_blank"
             >
               <button class="resume">Link to my Resume 📄</button>
             </a>
           </p>
+          <!-- Social icons -->
           <div class="social-icons">
             <a
               href="https://github.com/Sudiptobanerjee123"
@@ -202,6 +210,7 @@
             </a>
           </div>
         </div>
+        <!-- Developer image -->
         <div class="col col-lg">
           <img
             class="developer-image"
@@ -212,9 +221,9 @@
       </div>
     </section>
 
-    <!--Education-->
+    <!-- Education Section -->
     <section
-      class="container my-5"
+      class="container my-5 fade-in"
       id="education"
       style="background-color: #cfe2e4"
     >
@@ -222,8 +231,9 @@
         <span class="heading"> Education </span>
       </h2>
       <div class="education row">
-        <!-- Education 1 -->
+        <!-- Education 1: Master of Computer Science -->
         <div class="col-lg-6">
+          <!-- Details for Master's degree -->
           <h2 class="education-title">Master of Computer Science (M.A.S)</h2>
           <p class="major">Major: Computer Science (CS)</p>
           <p class="education-details">Illinois Institute of Technology</p>
@@ -231,11 +241,10 @@
           <p class="education-details" style="margin-bottom: 20px">
             CGPA: 3.34/4.00
           </p>
-          <!-- Add any additional details or relevant information here -->
         </div>
-
-        <!-- Education 2 -->
+        <!-- Education 2: Bachelor of Technology -->
         <div class="col-lg-6">
+          <!-- Details for Bachelor's degree -->
           <h2 class="education-title">Bachelor of Technology (B.Tech)</h2>
           <p class="major">
             Major: Electronics & Communication Engineering (ECE)
@@ -247,13 +256,13 @@
           <p class="education-details" style="margin-bottom: 20px">
             CGPA: 3.62/4.00
           </p>
-          <!-- Add any additional details or relevant information here -->
         </div>
       </div>
     </section>
-    <!-- Experience section component -->
+
+    <!-- Work Experience Section -->
     <section
-      class="container my-5"
+      class="container my-5 fade-in"
       id="experience"
       style="background-color: #cfe2e4"
     >
@@ -261,6 +270,7 @@
         <span class="heading">Work Experience</span>
       </h2>
       <div class="card-exp">
+        <!-- Card 1: Application Developer at IBM -->
         <div class="card" style="margin-top: 20px">
           <h3
             class="card-header py-4"
@@ -278,6 +288,7 @@
           </h3>
           <div class="card-body">
             <ul class="list-padding">
+              <!-- List of job responsibilities for IBM -->
               <li class="exp-desc">
                 Engineered & deployed a highly efficient automated Node.JS
                 utility to diminish the manual workload of application creation
@@ -302,6 +313,7 @@
             </ul>
           </div>
         </div>
+        <!-- Card 2: Research Intern at DRDO -->
         <div class="card my-3">
           <h3 class="card-header py-4" style="background-color: beige">
             <button
@@ -316,6 +328,7 @@
           </h3>
           <div class="card-body">
             <ul class="list-padding">
+              <!-- List of research accomplishments at DRDO -->
               <li class="exp-desc">
                 Acknowledged for architecting a cutting-edge Android Application
                 using J2EE SDK, XML & Android Studio, showcasing a remarkable
@@ -337,85 +350,104 @@
       </div>
     </section>
 
-    <!-- Projects section -->
-    <section class="container my-5" id="projects" style="background-color: #cfe2e4">
-        <h2 class="section-header">
-          <span class="heading">Projects</span>
-        </h2>
-          <div class="project-container" id="projectContainer"></div>
-        </div>
-      </section>
-      
-
-    <!--contact section-->
-      <section class="container my-5" id="contact" style="background-color: #cfe2e4;">
-            <h2 class="section-header">
-                <span class="heading">Contact</span>
-            </h2>
-            <div class="contact-container" id="contact">
-                <form class="bg-light mx-auto rounded p-5 form" id="email-form" style="margin-top: 35px;margin-bottom: 20px;">
-                    <div class="row form-group mb-3">
-                        <label class="col-sm-3 col-form-label" for="name"> Name: </label>
-                        <div class="col-sm-9">
-                            <input class="form-control" type="text" id="name" name="name"
-                            placeholder="Enter your name" />
-                        </div>
-                    </div>
-                    <div class="row form-group mb-3">
-                        <label class="col-sm-3 col-form-label" for="email"> Email: </label>
-                        <div class="col-sm-9">
-                            <input
-                                class="col-sm form-control"
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email"
-                            />
-                        </div>
-                    </div>
-                    <div class="row form-group mb-6">
-                        <label class="col-sm-3 col-form-label" for="message">
-                            Message:
-                        </label>
-                        <div class="col-sm-9">
-                            <textarea
-                                class="col-sm form-control"
-                                type="message"
-                                id="message"
-                                name="message"
-                                placeholder="Please submit any feedback or message for me!"
-                            ></textarea>
-                        </div>
-                    </div>
-                    <div
-                        class="form-group buttons form-buttons d-flex justify-content-center"
-                    >
-                        <button
-                            class="btn submit-button mx-2"
-                            type="submit"
-                            id="submit-button"
-                        >
-                            Send Message
-                        </button>
-                        <button class="btn reset-button" type="reset">Reset</button>
-                    </div>
-                </form>
-            </div>
+    <!-- Projects Section -->
+    <section
+      class="container my-5 fade-in"
+      id="projects"
+      style="background-color: #cfe2e4"
+    >
+      <h2 class="section-header"><span class="heading">Projects</span></h2>
+      <div class="project-container" id="projectContainer"></div>
     </section>
 
-    <!--Move to up icon-->
+    <!-- Contact Section -->
+    <section
+      class="container my-5"
+      id="contact"
+      style="background-color: #cfe2e4"
+    >
+      <h2 class="section-header"><span class="heading">Contact</span></h2>
+      <div class="contact-container" id="contact">
+        <form
+          class="bg-light mx-auto rounded p-5 form"
+          id="email-form"
+          style="margin-top: 35px; margin-bottom: 20px"
+        >
+          <div class="row form-group mb-3">
+            <label class="col-sm-3 col-form-label" for="name"> Name: </label>
+            <div class="col-sm-9">
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
+            </div>
+          </div>
+          <div class="row form-group mb-3">
+            <label class="col-sm-3 col-form-label" for="email"> Email: </label>
+            <div class="col-sm-9">
+              <input
+                class="col-sm form-control"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+            </div>
+          </div>
+          <div class="row form-group mb-6">
+            <label class="col-sm-3 col-form-label" for="message">
+              Message:
+            </label>
+            <div class="col-sm-9">
+              <textarea
+                class="col-sm form-control"
+                type="message"
+                id="message"
+                name="message"
+                placeholder="Please submit any feedback or message for me!"
+              ></textarea>
+            </div>
+          </div>
+          <div
+            class="form-group buttons form-buttons d-flex justify-content-center"
+          >
+            <button
+              class="btn submit-button mx-2"
+              type="submit"
+              id="submit-button"
+            >
+              Send Message
+            </button>
+            <button class="btn reset-button" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Button for scrolling to the top -->
     <button id="btnScrollTop">
-        <i class="material-icons">arrow_upward</i>
+      <!-- Upward arrow icon -->
+      <i class="material-icons">arrow_upward</i>
     </button>
 
-    
-    <!----Footer component-->
-    <footer class="container-fluid footer text-center mt-5"></footer> 
+    <!-- Footer component -->
+    <footer class="container-fluid footer text-center mt-5">
+      <!-- Content for the footer, such as links or copyright information -->
+    </footer>
+
+    <!-- Include the main JavaScript file -->
     <script src="./App.js"></script>
+
+    <!-- Include the EmailJS library -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!-- Include the Contact.js file for additional functionality -->
+    <script type="text/javascript" src="./Contact.js"></script>
   </body>
-  <script
-		type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-	></script>
-	<script type="text/javascript" src="./Contact.js"></script>
 </html>
