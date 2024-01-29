@@ -47,6 +47,4 @@ The JavaScript file (`script.js`) handles the dynamic display of project cards, 
    - The footer displays a copyright notice with the current year and developer information.
 
 6. **Contact Form Styling:**
-   - The contact form has styling for better readability, with buttons and form fields.
-
-
+   - The contact form has styling for better readability, with buttons and form fields
