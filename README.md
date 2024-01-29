@@ -49,4 +49,4 @@ The JavaScript file (`script.js`) handles the dynamic display of project cards, 
 6. **Contact Form Styling:**
    - The contact form has styling for better readability, with buttons and form fields.
 
-Feel free to customize and expand upon this portfolio template to suit your preferences and showcase your work effectively!
+
