@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Software Developer with skills in Frontend, UI/UX, seeking internship and full-time opportunities"
+    />
+    <meta
+      name="keywords"
+      content="Sudipta Banerjee, Master of Computer Science, Software Development, Frontend Development, Portfolio, Illinois Institute of Technology"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="theme.css" />   <!-- NEW -->
+    <link rel="stylesheet" href="./components/navbar/navbar.css" />
+    <link rel="stylesheet" href="./components/about/about.css" />
+    <link rel="stylesheet" href="./components/education/education.css" />
+    <link rel="stylesheet" href="./components/skills/skills.css" />
+    <link rel="stylesheet" href="./components/experience/experience.css" />
+    <link rel="stylesheet" href="./components/projects/projects.css" />
+    <link rel="stylesheet" href="./components/leadership/leadership.css" />
+    <link rel="stylesheet" href="./components/research/research.css" />
+    <link rel="stylesheet" href="./components/contact/contact.css" />
+    <link rel="stylesheet" href="./components/footer/footer.css" />
+
+    <title>Sudipta Banerjee - Portfolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="Images/icons8-developer-96.png"
+    />
+  </head>
+
+  <body>
+    <main id="main-content">
+      <div id="navbar"></div>
+      <div id="about"></div>
+      <div id="education"></div>
+      <div id="skills"></div>
+      <div id="experience"></div>
+      <div id="projects"></div>
+      <div id="leadership"></div>
+      <div id="research"></div>
+      <div id="contact"></div>
+      <div id="footer"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module">
+      import { renderNavbar } from "./components/navbar/navbar.js";
+      import { renderAbout, initAbout } from "./components/about/about.js";
+      import { renderEducation} from "./components/education/education.js";
+      import { renderSkills } from "./components/skills/skills.js";
+      import { renderExperience } from "./components/experience/experience.js";
+      import {
+        renderProjects,
+        renderProjectCards,
+      } from "./components/projects/projects.js";
+      import { renderLeadership } from "./components/leadership/leadership.js";
+      import { renderResearch } from "./components/research/research.js";
+      import { renderContact } from "./components/contact/contact.js";
+      import { renderFooter } from "./components/footer/footer.js";
+
+      document.getElementById("navbar").innerHTML = renderNavbar();
+      document.getElementById("about").innerHTML = renderAbout();
+      initAbout();
+      document.getElementById("education").innerHTML = renderEducation();
+      document.getElementById("skills").innerHTML = renderSkills();
+      document.getElementById("experience").innerHTML = renderExperience();
+      document.getElementById("projects").innerHTML = renderProjects();
+      document.getElementById("leadership").innerHTML = renderLeadership();
+      document.getElementById("research").innerHTML = renderResearch();
+      document.getElementById("contact").innerHTML = renderContact();
+      document.getElementById("footer").innerHTML = renderFooter();
+
+      // ===== THEME TOGGLE =====
+      (function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        if (!themeToggle) return;
+        const icon = themeToggle.querySelector('i');
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+
+        if (savedTheme === 'light') {
+          document.body.classList.add('light');
+          icon.classList.remove('fa-moon');
+          icon.classList.add('fa-sun');
+        } else {
+          icon.classList.remove('fa-sun');
+          icon.classList.add('fa-moon');
+        }
+
+        themeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('light');
+          const isLight = document.body.classList.contains('light');
+          localStorage.setItem('theme', isLight ? 'light' : 'dark');
+
+          if (isLight) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+          } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+          }
+        });
+      })();
+      // ===== END THEME TOGGLE =====
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.hash && performance.navigation.type === 1) {
+          window.scrollTo(0, 0);
+          history.replaceState(null, null, ' ');
+        }
+      });
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('scroll', function() {
+          const navbar = document.getElementById('main-nav');
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const categorySelect = document.getElementById("projectCategory");
+        const projectsGrid = document.getElementById("projectsGrid");
+
+        if (categorySelect && projectsGrid) {
+          categorySelect.addEventListener("change", (e) => {
+            projectsGrid.classList.add("loading");
+            setTimeout(() => {
+              projectsGrid.innerHTML = renderProjectCards(e.target.value);
+              projectsGrid.classList.remove("loading");
+            }, 300);
+          });
+        }
+      });
+
+      const researchItems = document.querySelectorAll(".research-item");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+
+      researchItems.forEach((item) => observer.observe(item));
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const categories = document.querySelectorAll(".skill-category");
+
+        categories.forEach((category) => {
+          category.addEventListener("click", function () {
+            categories.forEach((other) => {
+              if (other !== this) other.classList.remove("active");
+            });
+
+            this.classList.toggle("active");
+
+            if (window.innerWidth < 768 && this.classList.contains("active")) {
+              this.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          });
+        });
+      });
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollTop = document.getElementById("scrollTop");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            scrollTop.classList.add("show");
+          } else {
+            scrollTop.classList.remove("show");
+          }
+        });
+
+        scrollTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+
+      emailjs.init("TTVzEWFl52YKOSjPR");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const emailForm = document.getElementById("email-form");
+
+        if (emailForm) {
+          emailForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const senderName = document.getElementById("name");
+            const email = document.getElementById("email");
+
+            if (!senderName.value || !email.value) {
+              alert("Please fill in required fields: Name and Email");
+              return;
+            }
+
+            const serviceID = "service_4vtgpyo";
+            const templateID = "template_2xf9i9e";
+
+            emailjs.sendForm(serviceID, templateID, emailForm).then(
+              () => {
+                alert("Message sent successfully!");
+                emailForm.reset();
+              },
+              (error) => {
+                alert("Error sending message: " + error.text);
+              }
+            );
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

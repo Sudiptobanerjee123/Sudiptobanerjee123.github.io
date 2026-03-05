@@ -1,0 +1,435 @@
+/* projects.css - same layout, premium look */
+
+/* Section */
+.projects-section {
+  padding: 1.5rem 0;
+  background: var(--primary-bg);
+}
+
+.projects-container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+/* Dropdown */
+.category-selector {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.select-wrapper {
+  position: relative;
+  width: 250px;
+}
+
+.styled-select {
+  appearance: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--secondary-bg);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+}
+
+.styled-select:focus {
+  outline: none;
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--accent);
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.projects-grid.loading {
+  opacity: 0.5;
+}
+
+/* Card */
+.project-card {
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: var(--transition);
+  box-shadow:
+    0 14px 38px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle sheen */
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: radial-gradient(
+    900px 260px at 12% 0%,
+    rgba(255, 255, 255, 0.10),
+    transparent 62%
+  );
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card-header {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-header h3 {
+  color: var(--accent);
+  font-size: 1.19rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.project-category {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent);
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-style: italic;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  position: relative;
+  z-index: 1;
+}
+
+.project-description {
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tech pills */
+.tech-stack {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.tech-stack span {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.tech-stack span:hover {
+  background: rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.22);
+}
+
+/* Button */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  gap: 0.8rem;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(135deg, var(--highlight) 0%, var(--gradient-end) 100%);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: var(--transition);
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+}
+
+.project-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
+}
+
+/* Database Specific Layout Adjustments */
+[data-category="database"] .project-card {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================
+   LIGHT THEME OVERRIDES
+   ========================= */
+body.light .projects-section {
+  background: var(--secondary-bg);
+}
+
+body.light .styled-select {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.10);
+}
+
+body.light .styled-select:focus {
+  border-color: rgba(37, 99, 235, 0.28);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+body.light .project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.10);
+}
+
+body.light .project-card::before {
+  background: radial-gradient(
+    900px 260px at 12% 0%,
+    rgba(37, 99, 235, 0.10),
+    transparent 62%
+  );
+  opacity: 1;
+}
+
+body.light .project-card:hover {
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 20px 55px rgba(2, 6, 23, 0.12);
+}
+
+body.light .project-category {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.14);
+}
+
+body.light .tech-stack span {
+  background: rgba(2, 6, 23, 0.04);
+  border: 1px solid rgba(2, 6, 23, 0.08);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 1.5rem;
+  }
+
+  .projects-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 5rem;
+  }
+
+  .category-selector {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: 2.5rem;
+    transform: none;
+  }
+
+  .styled-select {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .select-arrow {
+    right: 0.8rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .project-card {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.7rem;
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+
+  .project-category {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .tech-stack span {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.65rem;
+  }
+
+  .project-link {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.75rem;
+  }
+
+  [data-category="database"] .project-card {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 1rem;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .category-selector {
+    position: static;
+    transform: none;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .styled-select {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .select-arrow {
+    font-size: 0.9em;
+    right: 0.7rem;
+  }
+
+  .projects-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+  }
+
+  .project-category {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .tech-stack {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .tech-stack span {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.6rem;
+  }
+
+  .project-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .project-card:hover,
+  .project-link:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  @media (hover: none) {
+    .project-card:hover,
+    .project-link:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .projects-container {
+    padding: 0.75rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .tech-stack span {
+    padding: 0.3rem 0.6rem;
+  }
+
+  .project-link {
+    font-size: 0.65rem;
+  }
+}

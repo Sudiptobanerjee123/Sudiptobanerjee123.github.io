@@ -1,0 +1,488 @@
+/* navbar.css - premium look (NO layout changes) */
+
+#main-nav {
+  background: linear-gradient(
+    90deg,
+    rgba(18, 18, 18, 0.92) 0%,
+    rgba(18, 18, 18, 0.78) 100%
+  );
+  padding: 1rem 10rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* Subtle sheen */
+#main-nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 220px at 15% 0%, rgba(255, 255, 255, 0.10), transparent 60%);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* Keep content above sheen */
+#main-nav .container,
+#main-nav .navbar-brand,
+#main-nav .navbar-collapse {
+  position: relative;
+  z-index: 1;
+}
+
+.goose-logo-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goose-icon {
+  color: var(--accent);
+  transition: var(--transition);
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.18));
+}
+
+.navbar-brand {
+  padding: 1rem;
+}
+
+.logo-text {
+  font-weight: 650;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  letter-spacing: 0.4px;
+  color: var(--text-primary);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+@keyframes goose-fly {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.navbar-brand:hover .goose-icon {
+  animation: goose-fly 0.8s ease-in-out infinite;
+  color: #fff3b0;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.35));
+}
+
+.container {
+  max-width: 1300px;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-right {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-secondary) !important;
+  font-size: 1rem;
+  padding: 0.625rem 1rem !important;
+  font-weight: 560;
+  letter-spacing: 0.1px;
+  transition: all 0.25s ease;
+  border-radius: 10px;
+  position: relative;
+}
+
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0.375rem;
+  left: 50%;
+  background-color: var(--accent);
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+  opacity: 0.9;
+}
+
+.navbar-nav .nav-link:hover:not(.dropdown-toggle)::after {
+  width: 70%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent) !important;
+  background-color: rgba(255, 215, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Dropdown */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  background: rgba(18, 18, 18, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  padding: 0.6rem;
+  margin-top: 0.75rem;
+  min-width: 180px;
+  animation: dropdownFade 0.2s ease-out;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  padding: 0.625rem 1rem;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+  margin-bottom: 0.25rem;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: rgba(255, 215, 0, 0.10);
+  color: var(--accent);
+}
+
+/* CTA Button */
+.cta-button {
+  background: linear-gradient(135deg, var(--highlight) 0%, var(--gradient-end) 100%);
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem 1.25rem !important;
+  font-weight: 650;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(700px 200px at 20% 10%, rgba(255, 255, 255, 0.20), transparent 60%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+}
+
+/* Toggler */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.375rem 0.625rem;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(255, 215, 0, 0.25);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,215,0,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Scrolled state */
+#main-nav.scrolled {
+  padding: 0.75rem 1.5rem;
+  background: rgba(18, 18, 18, 0.86);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================
+   LIGHT THEME OVERRIDES
+   ========================= */
+body.light #main-nav {
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(2, 6, 23, 0.08);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.10);
+}
+
+body.light #main-nav::before {
+  background: radial-gradient(900px 220px at 15% 0%, rgba(37, 99, 235, 0.12), transparent 60%);
+  opacity: 1;
+}
+
+body.light .logo-text {
+  text-shadow: none;
+}
+
+body.light .navbar-nav .nav-link:hover {
+  background-color: rgba(37, 99, 235, 0.07);
+  box-shadow: 0 10px 25px rgba(2, 6, 23, 0.08);
+}
+
+body.light .dropdown-menu {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(2, 6, 23, 0.10);
+  box-shadow: 0 22px 55px rgba(2, 6, 23, 0.14);
+}
+
+body.light .dropdown-item:hover,
+body.light .dropdown-item:focus {
+  background-color: rgba(37, 99, 235, 0.10);
+}
+
+body.light .navbar-toggler {
+  border: 1px solid rgba(2, 6, 23, 0.10);
+  background: rgba(2, 6, 23, 0.03);
+}
+
+body.light #main-nav.scrolled {
+  background: rgba(255, 255, 255, 0.90);
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.12);
+}
+
+/* Mobile/Tablet styles remain exactly as you had them */
+@media (max-width: 991.98px) {
+  #main-nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand {
+    max-width: 50%;
+    gap: 0.5rem;
+    margin-left: -0.5rem;
+    padding-left: 0 !important;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+    margin-left: -4px;
+    padding-left: 0;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-bg);
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  body.light .navbar-collapse {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 16px 40px rgba(2, 6, 23, 0.12);
+    border-bottom: 1px solid rgba(2, 6, 23, 0.08);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0 !important;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  .dropdown-menu {
+    margin-left: 1rem;
+    background-color: var(--secondary-bg);
+  }
+
+  body.light .dropdown-menu {
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 577px) {
+  .navbar-brand {
+    max-width: 60%;
+    margin-left: -0.5rem;
+    padding-left: 0;
+  }
+
+  .goose-logo-container {
+    width: 35px;
+    height: 35px;
+    margin-right: 0.5rem;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+    margin-left: -4px;
+  }
+
+  .navbar-collapse {
+    position: static;
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    gap: 0.8rem;
+    margin-left: auto !important;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 0.6rem 0.9rem !important;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .cta-button {
+    margin-left: 0.5rem;
+    padding: 0.6rem 1.2rem !important;
+    line-height: 1.2;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+
+  #main-nav {
+    padding: 0.8rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    max-width: 80%;
+    margin-left: -1rem;
+    padding-left: 0;
+  }
+
+  .logo-text {
+    margin-left: -8px;
+    font-size: 1.1rem;
+  }
+
+  .goose-logo-container {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.25rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.5rem;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, transparent 0%, var(--accent) 50%, transparent 100%) 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  body.light .navbar-collapse {
+    border-image: linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.65) 50%, transparent 100%) 1;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1rem !important;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 767px) {
+  .nav-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+}

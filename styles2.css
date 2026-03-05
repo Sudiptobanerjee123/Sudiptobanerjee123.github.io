@@ -1,0 +1,36 @@
+/* styles2.css */
+:root {
+    --primary-bg: #1A1A1A;       /* Deep charcoal */
+    --secondary-bg: #1D1D1D;     /* Smoky gray (matches original about) */
+    --accent: #FFD700;           /* Gold accent */
+    --text-primary: #E0E0E0;     /* Soft white */
+    --text-secondary: #9E9E9E;   /* Medium gray */
+    --highlight: #6A1B9A;        /* Rich plum */
+    --transition: all 0.3s ease-in-out;
+
+    /* Additional variables for components */
+    --card-bg: var(--secondary-bg);
+    --card-border: #404040;
+    --btn-bg: var(--accent);
+    --btn-text: #1A1A1A;
+    --btn-hover: #e6c200;
+    --footer-bg: var(--secondary-bg);
+    --footer-text: var(--text-primary);
+    --scroll-top-bg: #7c1313;
+    --scroll-top-hover: #d54a20;
+
+    /* New variables for gradients */
+    --gradient-end: #4a148c;                  /* Darker purple for button gradient */
+    --navbar-gradient-end: #121212;            /* Darker end for navbar background */
+}
+
+/* Base Styles */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}

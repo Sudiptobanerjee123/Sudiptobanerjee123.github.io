@@ -1,0 +1,26 @@
+/* themes.css - Modern, clean light theme */
+.light {
+  --primary-bg: #ffffff;           /* Pure white */
+  --secondary-bg: #f8fafc;         /* Very light cool gray */
+  --accent: #2563eb;                /* Vibrant blue */
+  --text-primary: #0a0a0a;          /* Almost black */
+  --text-secondary: #334155;        /* Slate gray */
+  --highlight: #7c3aed;              /* Modern purple */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;            /* Light gray border */
+  --btn-bg: var(--accent);
+  --btn-text: #ffffff;
+  --btn-hover: #1d4ed8;              /* Darker blue */
+  --footer-bg: var(--secondary-bg);
+  --footer-text: var(--text-primary);
+  --scroll-top-bg: var(--accent);
+  --scroll-top-hover: var(--btn-hover);
+
+  /* Gradient variables */
+  --gradient-end: #4f46e5;           /* Indigo for button gradient end */
+  --navbar-gradient-end: #e2e8f0;     /* Light gray for navbar gradient end */
+}
+
+body, body * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
